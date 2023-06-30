@@ -1,0 +1,14 @@
+provider "aws"{
+region = "ap-south-1"
+access_key = "AKIAT44CDE62PHATRYTW"
+secret_key = "2kRs26kbmJ7f8Umuhpg8UdEqKOpdnqKAn4wzIvVx"
+}
+
+resource "aws_instance" "example"{
+ami      = "ami-0f5ee92e2d63afc18"
+instance_type  = "t2.large" 
+key_name       = "jenkins"
+tags           = {
+name           ="vcube"
+}
+}
